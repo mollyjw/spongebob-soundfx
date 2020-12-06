@@ -11,8 +11,8 @@
     "e2e": "ng e2e"
   },
   "engines": {
-    "node": "12.18.3",
-    "npm": "6.14.6"
+    "node": "12.x",
+    "npm": "6.x"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +30,8 @@
     "@angular/router": "~10.2.0",
     "chokidar": "^3.4.3",
     "express": "^4.17.1",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "resolve-url": "^0.2.1",
