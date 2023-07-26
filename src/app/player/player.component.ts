@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-  numClicks: number = 0;
+  numClicks = 0;
   files = [
     '../../assets/soundclips/2000-years-later.mp3',
     '../../assets/soundclips/a-few-moments-later-hd.mp3',
@@ -60,24 +60,24 @@ export class PlayerComponent implements OnInit {
     '../../assets/soundclips/you-left-your-lights-on.mp3',
     '../../assets/soundclips/you-what.mp3'
 
-  ]
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  playClip() {
-    let audio = new Audio();
+  playClip(): void {
+    const audio = new Audio();
     audio.src = this.files[Math.floor(Math.random() * this.files.length)]
     // audio.src = this.clips;
     audio.load();
     audio.play();
   }
 
-  onClick() {
-    this.numClicks += 1
-    this.playClip()
+  onClick(): void {
+    this.numClicks += 1;
+    this.playClip();
   }
 
 }
